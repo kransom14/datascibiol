@@ -302,14 +302,14 @@ div.tocify {
 <div id="load-the-tidyverse" class="section level2">
 <h2>Load the tidyverse</h2>
 <pre class="r"><code>library(&quot;tidyverse&quot;)</code></pre>
-<pre><code>## -- Attaching packages ------------------------------------------------------------------------------------------ tidyverse 1.2.1 --</code></pre>
-<pre><code>## v ggplot2 3.1.0       v purrr   0.3.1  
-## v tibble  2.0.1       v dplyr   0.8.0.1
-## v tidyr   0.8.3       v stringr 1.4.0  
-## v readr   1.3.1       v forcats 0.4.0</code></pre>
-<pre><code>## -- Conflicts --------------------------------------------------------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.1.0       ✔ purrr   0.3.1  
+## ✔ tibble  2.0.1       ✔ dplyr   0.8.0.1
+## ✔ tidyr   0.8.3       ✔ stringr 1.4.0  
+## ✔ readr   1.3.1       ✔ forcats 0.4.0</code></pre>
+<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
 </div>
 <div id="dealing-with-nas" class="section level2">
 <h2>Dealing with NA’s</h2>
@@ -547,7 +547,7 @@ msleep_na</code></pre>
 ##    name genus  vore order conservation sleep_total sleep_rem sleep_cycle
 ##   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;        &lt;int&gt;       &lt;int&gt;     &lt;int&gt;       &lt;int&gt;
 ## 1     0     0     7     0           29           0        22          51
-## # ... with 3 more variables: awake &lt;int&gt;, brainwt &lt;int&gt;, bodywt &lt;int&gt;</code></pre>
+## # … with 3 more variables: awake &lt;int&gt;, brainwt &lt;int&gt;, bodywt &lt;int&gt;</code></pre>
 <p>Don’t forget that we can use <code>gather()</code> to make viewing this output easier.</p>
 <pre class="r"><code>msleep %&gt;% 
   purrr::map_df(~ sum(is.na(.))) %&gt;% 
@@ -606,17 +606,17 @@ msleep_na2</code></pre>
 <pre><code>## # A tibble: 83 x 11
 ##    name  genus vore  order conservation sleep_total sleep_rem sleep_cycle
 ##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
-##  1 Chee~ Acin~ carni Carn~ lc                  12.1      NA        NA    
-##  2 Owl ~ Aotus omni  Prim~ &lt;NA&gt;                17         1.8      NA    
-##  3 Moun~ Aplo~ herbi Rode~ nt                  14.4       2.4      NA    
-##  4 Grea~ Blar~ omni  Sori~ lc                  14.9       2.3       0.133
-##  5 Cow   Bos   herbi Arti~ domesticated         4         0.7       0.667
-##  6 Thre~ Brad~ herbi Pilo~ &lt;NA&gt;                14.4       2.2       0.767
-##  7 Nort~ Call~ carni Carn~ vu                   8.7       1.4       0.383
-##  8 Vesp~ Calo~ &lt;NA&gt;  Rode~ &lt;NA&gt;                 7        NA        NA    
-##  9 Dog   Canis carni Carn~ domesticated        10.1       2.9       0.333
-## 10 Roe ~ Capr~ herbi Arti~ lc                   3        NA        NA    
-## # ... with 73 more rows, and 3 more variables: awake &lt;dbl&gt;, brainwt &lt;dbl&gt;,
+##  1 Chee… Acin… carni Carn… lc                  12.1      NA        NA    
+##  2 Owl … Aotus omni  Prim… &lt;NA&gt;                17         1.8      NA    
+##  3 Moun… Aplo… herbi Rode… nt                  14.4       2.4      NA    
+##  4 Grea… Blar… omni  Sori… lc                  14.9       2.3       0.133
+##  5 Cow   Bos   herbi Arti… domesticated         4         0.7       0.667
+##  6 Thre… Brad… herbi Pilo… &lt;NA&gt;                14.4       2.2       0.767
+##  7 Nort… Call… carni Carn… vu                   8.7       1.4       0.383
+##  8 Vesp… Calo… &lt;NA&gt;  Rode… &lt;NA&gt;                 7        NA        NA    
+##  9 Dog   Canis carni Carn… domesticated        10.1       2.9       0.333
+## 10 Roe … Capr… herbi Arti… lc                   3        NA        NA    
+## # … with 73 more rows, and 3 more variables: awake &lt;dbl&gt;, brainwt &lt;dbl&gt;,
 ## #   bodywt &lt;dbl&gt;</code></pre>
 </div>
 <div id="practice-1" class="section level2">
@@ -662,7 +662,6 @@ msleep_na2</code></pre>
 </ol>
 <pre class="r"><code>#install.packages(&quot;skimr&quot;)</code></pre>
 <pre class="r"><code>library(&quot;skimr&quot;)</code></pre>
-<pre><code>## Warning: package 'skimr' was built under R version 3.5.3</code></pre>
 <pre><code>## 
 ## Attaching package: 'skimr'</code></pre>
 <pre><code>## The following object is masked from 'package:stats':
@@ -674,14 +673,14 @@ msleep_na2</code></pre>
 ##  n obs: 1440 
 ##  n variables: 13 
 ## 
-## -- Variable type:character --------------------------------------------------------------------------------------------------------
+## ── Variable type:character ──────────────────────────────────────────────────────────────────────────────────────────────────
 ##  variable missing complete    n min max empty n_unique
 ##    family       0     1440 1440   6  15     0       96
 ##     genus       0     1440 1440   3  16     0      618
 ##     order       0     1440 1440   7  14     0       17
 ##   species       0     1440 1440   3  17     0     1191
 ## 
-## -- Variable type:numeric ----------------------------------------------------------------------------------------------------------
+## ── Variable type:numeric ────────────────────────────────────────────────────────────────────────────────────────────────────
 ##     variable missing complete    n      mean         sd   p0  p25     p50
 ##          AFR       0     1440 1440   -408.12     504.97 -999 -999    2.5 
 ##    gestation       0     1440 1440   -287.25     455.36 -999 -999    1.05
@@ -693,15 +692,15 @@ msleep_na2</code></pre>
 ##    wean_mass       0     1440 1440  16048.93   5e+05    -999 -999 -999   
 ##      weaning       0     1440 1440   -427.17     496.71 -999 -999    0.73
 ##      p75          p100     hist
-##    15.61     210       &lt;U+2586&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2587&gt;&lt;U+2581&gt;
-##     4.5       21.46    &lt;U+2583&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2587&gt;
-##     3.83      14.18    &lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2587&gt;
-##     1.15       7.5     &lt;U+2587&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2587&gt;
-##  7009.17       1.5e+08 &lt;U+2587&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;
-##   147.25    1368       &lt;U+2587&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2583&gt;&lt;U+2582&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;
-##    98    2250000       &lt;U+2587&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;
-##    10          1.9e+07 &lt;U+2587&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;
-##     2         48       &lt;U+2586&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2581&gt;&lt;U+2587&gt;</code></pre>
+##    15.61     210       ▆▁▁▁▁▁▇▁
+##     4.5       21.46    ▃▁▁▁▁▁▁▇
+##     3.83      14.18    ▁▁▁▁▁▁▁▇
+##     1.15       7.5     ▇▁▁▁▁▁▁▇
+##  7009.17       1.5e+08 ▇▁▁▁▁▁▁▁
+##   147.25    1368       ▇▁▁▃▂▁▁▁
+##    98    2250000       ▇▁▁▁▁▁▁▁
+##    10          1.9e+07 ▇▁▁▁▁▁▁▁
+##     2         48       ▆▁▁▁▁▁▁▇</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Run the code below. Are there any NA’s in the data? Does this seem likely? Do the mean values above make sense for this data?</li>
 </ol>
